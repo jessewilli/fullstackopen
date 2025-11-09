@@ -6,6 +6,7 @@
     "start": "node index.js",
     "dev": "node --watch index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
     "build:ui": "rm -rf dist && cd ../NotesFront && npm run build && cp -r dist ../Notes",
     "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push"
   },
@@ -16,5 +17,12 @@
     "dotenv": "^16.4.7",
     "express": "^5.1.0",
     "mongoose": "^8.11.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@stylistic/eslint-plugin-js": "^4.4.1",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react": "^7.37.5",
+    "globals": "^16.5.0"
   }
 }
